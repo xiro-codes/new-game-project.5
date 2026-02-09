@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dofsxtluwh4nu"]
+
+[ext_resource type="Script" uid="uid://douyvi4i0ul88" path="res://UI/GameMenu/SubMenus/InfoButton/info_button.gd" id="1_70x1e"]
+
+[node name="InfoButton" type="Button"]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 444.0
+offset_bottom = 23.0
+script = ExtResource("1_70x1e")
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="HeadShot" type="TextureRect" parent="FlowContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 4
+
+[node name="Level" type="Label" parent="FlowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lv. 1"
+
+[node name="Name" type="Label" parent="FlowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Health" type="Label" parent="FlowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "120 / 128"
+horizontal_alignment = 1

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://bel0pnbue7jyp"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_xrwoe"]
+
+[resource]
+script = ExtResource("1_xrwoe")
+display_name = "Training Blade"
+dmg_type = 0
+atk_type = 0
+damage = 5
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

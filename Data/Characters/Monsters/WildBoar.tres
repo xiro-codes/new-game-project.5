@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MonsterPartyMember" load_steps=8 format=3 uid="uid://bgb854wvdrqxd"]
+
+[ext_resource type="Script" uid="uid://c5wrlkwkqn8t7" path="res://Libs/Resources/monster_party_member.gd" id="1_bih0n"]
+[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_pbeif"]
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="2_tww0f"]
+[ext_resource type="Texture2D" uid="uid://c8pgckfbwvsk5" path="res://Assets/Monsters/boar.png" id="3_4iwv7"]
+[ext_resource type="Script" uid="uid://dda1krjpsv7kc" path="res://Libs/Resources/gear_res.gd" id="4_4iwv7"]
+[ext_resource type="Resource" uid="uid://bkyr2c0qd7bhq" path="res://Data/Gear/MonsterGear/Attacks/tusk.tres" id="4_pbeif"]
+
+[sub_resource type="Resource" id="Resource_3vngh"]
+script = ExtResource("2_tww0f")
+dmg_type = 0
+atk_type = 1
+target_type = 0
+damage = 10
+display_name = "Default"
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"
+
+[resource]
+script = ExtResource("1_bih0n")
+exp_value = 10
+display_name = "Wild Boar"
+level = 1
+base_hp = 31
+current_hp = 31
+speed = 0.035
+base_melee_shield = 30
+base_magic_shield = 27
+weapon_gear = Array[ExtResource("4_4iwv7")]([ExtResource("4_pbeif"), SubResource("Resource_3vngh")])
+weapon_slots = Dictionary[int, ExtResource("2_tww0f")]({
+0: null,
+1: null
+})
+body_slots = Dictionary[int, ExtResource("1_pbeif")]({
+0: null,
+1: null,
+2: null,
+3: null
+})
+texture = ExtResource("3_4iwv7")
+exp_owned = 0
+metadata/_custom_type_script = "uid://c5wrlkwkqn8t7"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://cdujlthpp1ngv"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_5gqmu"]
+
+[resource]
+script = ExtResource("1_5gqmu")
+display_name = "Old Axe"
+dmg_type = 1
+atk_type = 1
+damage = 30
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

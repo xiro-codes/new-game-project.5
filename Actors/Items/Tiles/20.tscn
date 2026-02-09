@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d03qdtf7csfi"]
+
+[ext_resource type="PackedScene" uid="uid://bmbymm7rmmdo6" path="res://Actors/Items/item.tscn" id="1_ocu0y"]
+
+[node name="10" instance=ExtResource("1_ocu0y")]
+tile_id = "10"
+is_for = 1
+slot = 1

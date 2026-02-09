@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://ba57oap5voy7p"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_v8tqx"]
+
+[resource]
+script = ExtResource("1_v8tqx")
+display_name = "Default"
+dmg_type = 0
+atk_type = 2
+damage = 20
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

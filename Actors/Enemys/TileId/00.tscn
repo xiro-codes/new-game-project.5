@@ -1,0 +1,8 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkua1blnwikly"]
+
+[ext_resource type="PackedScene" uid="uid://cj1y4ou4f837x" path="res://Actors/Enemys/enemy.tscn" id="1_fshxt"]
+[ext_resource type="Script" uid="uid://c5wrlkwkqn8t7" path="res://Libs/Resources/monster_party_member.gd" id="2_fshxt"]
+[ext_resource type="Resource" uid="uid://bipqqu3iukmfw" path="res://Data/Characters/Monsters/Ghost.tres" id="3_p7okh"]
+
+[node name="00" instance=ExtResource("1_fshxt")]
+monster_party = Array[ExtResource("2_fshxt")]([ExtResource("3_p7okh")])

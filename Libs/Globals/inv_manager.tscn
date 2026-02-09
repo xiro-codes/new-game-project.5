@@ -1,0 +1,10 @@
+[gd_scene load_steps=5 format=3 uid="uid://c08tminxhpj0p"]
+
+[ext_resource type="Script" uid="uid://bquf4mv3x15kg" path="res://Libs/Globals/inv_manager.gd" id="1_otg54"]
+[ext_resource type="Script" uid="uid://dda1krjpsv7kc" path="res://Libs/Resources/gear_res.gd" id="2_80awv"]
+[ext_resource type="Resource" uid="uid://c6exnp6oxgqf4" path="res://Data/Gear/WeaponGear/Axes/Training Axe.tres" id="3_j7vna"]
+[ext_resource type="Resource" uid="uid://d0olc0ks1sdv2" path="res://Data/Gear/WeaponGear/Axes/Worn Axe.tres" id="4_j7vna"]
+
+[node name="InvManager" type="Node"]
+script = ExtResource("1_otg54")
+items = Array[ExtResource("2_80awv")]([ExtResource("3_j7vna"), ExtResource("3_j7vna"), ExtResource("3_j7vna"), ExtResource("4_j7vna")])

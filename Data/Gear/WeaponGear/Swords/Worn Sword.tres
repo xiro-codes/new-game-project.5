@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://dm17qj30dm1x8"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_my4xp"]
+
+[resource]
+script = ExtResource("1_my4xp")
+display_name = "Worn Sword"
+dmg_type = 0
+atk_type = 1
+damage = 25
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

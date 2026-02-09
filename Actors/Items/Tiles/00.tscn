@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://43b7mpmp8f11"]
+
+[ext_resource type="PackedScene" uid="uid://bmbymm7rmmdo6" path="res://Actors/Items/item.tscn" id="1_shfdt"]
+
+[node name="00" instance=ExtResource("1_shfdt")]
+editor_description = "worn axe"

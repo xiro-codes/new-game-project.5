@@ -1,0 +1,10 @@
+[gd_scene load_steps=5 format=3 uid="uid://bicx3ipbwvbwm"]
+
+[ext_resource type="PackedScene" uid="uid://cj1y4ou4f837x" path="res://Actors/Enemys/enemy.tscn" id="1_o03ho"]
+[ext_resource type="Script" uid="uid://c5wrlkwkqn8t7" path="res://Libs/Resources/monster_party_member.gd" id="2_o03ho"]
+[ext_resource type="Resource" uid="uid://bipqqu3iukmfw" path="res://Data/Characters/Monsters/Ghost.tres" id="3_6ldl0"]
+[ext_resource type="Resource" uid="uid://bgb854wvdrqxd" path="res://Data/Characters/Monsters/WildBoar.tres" id="4_silhg"]
+
+[node name="01" instance=ExtResource("1_o03ho")]
+monster_party = Array[ExtResource("2_o03ho")]([ExtResource("3_6ldl0"), ExtResource("4_silhg")])
+tile_id = "01"

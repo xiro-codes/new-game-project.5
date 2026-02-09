@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdnwuqe0b48qn"]
+
+[ext_resource type="Script" uid="uid://bmch0wgblvxjk" path="res://Battle/battle_manager.gd" id="1_bqdiw"]
+[ext_resource type="PackedScene" uid="uid://ctmjq04p1i1s0" path="res://Battle/Combantants/player_combatant.tscn" id="2_6wqu2"]
+[ext_resource type="PackedScene" uid="uid://byqjf4ja03110" path="res://Battle/UI/ResultScreen/result_screen.tscn" id="2_bqdiw"]
+[ext_resource type="PackedScene" uid="uid://bw2ysh5r8hwng" path="res://Battle/UI/ActionMenu/action_menu.tscn" id="2_xb3vn"]
+[ext_resource type="PackedScene" uid="uid://c1gm4jf106guh" path="res://Battle/Combantants/enemy_combatant.tscn" id="3_c7p6n"]
+[ext_resource type="PackedScene" uid="uid://deu2an1dav14q" path="res://path_2d.tscn" id="6_i6dci"]
+
+[sub_resource type="Gradient" id="Gradient_6oy3k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i6dci"]
+gradient = SubResource("Gradient_6oy3k")
+fill_to = Vector2(0.991453, 1)
+
+[node name="BattleManager" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_bqdiw")
+player_combatant_scene = ExtResource("2_6wqu2")
+enemy_combatant_scene = ExtResource("3_c7p6n")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_i6dci")
+
+[node name="Combatants" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Combatants"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/Combatants/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MonsterPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Combatants/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ResultUI" parent="Control" instance=ExtResource("2_bqdiw")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="ActionMenu" parent="Control" instance=ExtResource("2_xb3vn")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="Targeter" parent="." instance=ExtResource("6_i6dci")]

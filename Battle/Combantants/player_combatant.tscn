@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctmjq04p1i1s0"]
+
+[ext_resource type="PackedScene" uid="uid://d0fx804unbs4j" path="res://Battle/Combantants/combatant.tscn" id="1_elom6"]
+[ext_resource type="Texture2D" uid="uid://c08dojpgnbnss" path="res://Assets/Monsters/ghost.png" id="2_elom6"]
+
+[node name="Combatant" instance=ExtResource("1_elom6")]
+
+[node name="HeadShot" type="TextureRect" parent="." index="0"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_elom6")
+expand_mode = 4
+
+[node name="AtbGauge" parent="Panel/MarginContainer/VBoxContainer" index="0"]
+value = 27.79
+
+[node name="TargetPoint" parent="." index="3"]
+position = Vector2(-8, 64)

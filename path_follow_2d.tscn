@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://biccgn2jfpipi"]
+
+[node name="PathFollow2D" type="PathFollow2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(3.5, 3.5)
+antialiased = true
+polygon = PackedVector2Array(-6.85714, 0, 0, -6.85714, 6.85714, 0, 0, 6.85714)

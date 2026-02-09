@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgr08tsap1d13"]
+
+[ext_resource type="Script" uid="uid://d2x3a2mwbg81d" path="res://UI/GameMenu/SubMenus/EquipmentInfo/equipment.gd" id="1_h260x"]
+
+[node name="Equipment" type="GridContainer"]
+columns = 2
+script = ExtResource("1_h260x")
+
+[node name="LHandLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Left Hand"
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LHandGear" type="Label" parent="Button"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+text = "None"
+horizontal_alignment = 1
+
+[node name="RHandLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Right Hand"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+
+[node name="RHandGear" type="Label" parent="Button2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="HeadLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Head"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+
+[node name="HeadGear" type="Label" parent="Button3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="ChestLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Chest"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+
+[node name="ChestGear" type="Label" parent="Button4"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="FeetLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Boots"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+
+[node name="FeetGear" type="Label" parent="Button5"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="RingLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Ring"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 2
+
+[node name="RingGear" type="Label" parent="Button6"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "None"
+horizontal_alignment = 1

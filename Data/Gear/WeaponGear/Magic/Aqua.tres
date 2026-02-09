@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://dlbpls5i8sjd6"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_ht62r"]
+
+[resource]
+script = ExtResource("1_ht62r")
+display_name = "Aqua"
+dmg_type = 0
+atk_type = 2
+damage = 20
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

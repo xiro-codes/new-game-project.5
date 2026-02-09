@@ -1,0 +1,173 @@
+[gd_scene load_steps=5 format=3 uid="uid://byqjf4ja03110"]
+
+[ext_resource type="Script" uid="uid://10h8ngfrbwlh" path="res://Battle/UI/ResultScreen/result_screen.gd" id="1_dsgr8"]
+
+[sub_resource type="Gradient" id="Gradient_2qssl"]
+offsets = PackedFloat32Array(0, 0.366372)
+colors = PackedColorArray(1, 1, 1, 1, 0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dsgr8"]
+gradient = SubResource("Gradient_2qssl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cilhh"]
+texture = SubResource("GradientTexture1D_dsgr8")
+
+[node name="ResultUI" type="Control" node_paths=PackedStringArray("name_slots", "exp_slots")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dsgr8")
+name_slots = [NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/PartyMember1"), NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/PartyMember2"), NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/PartyMember3")]
+exp_slots = [NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Exp1"), NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/Exp2"), NodePath("HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/Exp3")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cilhh")
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+text = "Results"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "Experience Gained"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyMember1" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Name"
+
+[node name="Exp1" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "%d EXP"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyMember2" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Name"
+
+[node name="Exp2" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "%d EXP"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyMember3" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Name"
+
+[node name="Exp3" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "%d EXP"
+
+[node name="Control" type="Control" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+text = "Gold Obtained"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer6" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "%d G"
+
+[node name="Spacer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

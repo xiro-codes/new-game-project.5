@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://hapj8sqqggok"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_7d0h0"]
+
+[resource]
+script = ExtResource("1_7d0h0")
+display_name = "Wooden Staff"
+dmg_type = 1
+atk_type = 1
+damage = 20
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

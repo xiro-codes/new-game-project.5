@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj1y4ou4f837x"]
+
+[ext_resource type="Script" uid="uid://u7tv3jd5yiup" path="res://Actors/Enemys/enemy.gd" id="1_8xdqn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3a3to"]
+size = Vector3(0.25, 0.1, 0.25)
+
+[node name="Enemy" type="Area3D"]
+script = ExtResource("1_8xdqn")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 1, 1)
+text = "01
+"
+font_size = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3a3to")

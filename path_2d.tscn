@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://deu2an1dav14q"]
+
+[ext_resource type="Script" uid="uid://b5xstq2oh02fg" path="res://path_2d.gd" id="1_npvew"]
+[ext_resource type="PackedScene" uid="uid://biccgn2jfpipi" path="res://path_follow_2d.tscn" id="2_f5thg"]
+
+[node name="Targeter" type="Path2D"]
+script = ExtResource("1_npvew")
+arrow_scene = ExtResource("2_f5thg")
+total_arrows = 1
+spawn_interval = 0.2
+travel_speed = 800.0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://cgx4htj3gv1vt"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_hrreq"]
+
+[resource]
+script = ExtResource("1_hrreq")
+display_name = "Old Bow"
+dmg_type = 1
+atk_type = 0
+damage = 25
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

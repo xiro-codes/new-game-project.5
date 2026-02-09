@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://cowim24msrdq7"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_krytm"]
+
+[resource]
+script = ExtResource("1_krytm")
+display_name = "Steel Sword"
+dmg_type = 0
+atk_type = 1
+damage = 45
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmbymm7rmmdo6"]
+
+[ext_resource type="Script" uid="uid://oi12lntpry5d" path="res://Actors/Items/item.gd" id="1_rmh6q"]
+[ext_resource type="Resource" uid="uid://cdujlthpp1ngv" path="res://Data/Gear/WeaponGear/Axes/Old Axe.tres" id="2_u4fxt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u4fxt"]
+size = Vector3(0.25, 0.1, 0.25)
+
+[node name="Item" type="Area3D"]
+script = ExtResource("1_rmh6q")
+gear = ExtResource("2_u4fxt")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+modulate = Color(0.111373, 0.765314, 0.280682, 1)
+outline_modulate = Color(1, 1, 1, 1)
+text = "01
+"
+font_size = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_u4fxt")

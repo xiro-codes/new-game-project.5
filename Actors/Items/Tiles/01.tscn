@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fg0fyhodxw2f"]
+
+[ext_resource type="PackedScene" uid="uid://bmbymm7rmmdo6" path="res://Actors/Items/item.tscn" id="1_jbog2"]
+
+[node name="01" instance=ExtResource("1_jbog2")]
+editor_description = "Item pickup old axe
+"
+tile_id = "01"

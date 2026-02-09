@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GearRes" load_steps=2 format=3 uid="uid://bbky3ybdjne3"]
+
+[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="1_h5pdw"]
+
+[resource]
+script = ExtResource("1_h5pdw")
+display_name = "Aquara"
+dmg_type = 0
+atk_type = 2
+damage = 30
+metadata/_custom_type_script = "uid://3bmgpwppvnyu"
