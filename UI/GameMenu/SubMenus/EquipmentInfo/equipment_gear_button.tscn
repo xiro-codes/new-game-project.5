@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dulwjgjnb6qck"]
+
+[node name="LHandButton" type="Button" unique_id=618071100]
+custom_minimum_size = Vector2(85, 0)
+size_flags_horizontal = 3
+
+[node name="LHandGear" type="Label" parent="." unique_id=279111606]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+text = "None"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1901468394]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.2206897
+anchor_top = 0.5
+anchor_right = 2.151724
+anchor_bottom = 6.869565
+offset_left = -20.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=229184633]
+layout_mode = 2
+
+[node name="GearList" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=1256528794]
+unique_name_in_owner = true
+layout_mode = 2

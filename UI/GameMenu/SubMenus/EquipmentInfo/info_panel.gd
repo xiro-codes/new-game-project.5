@@ -18,9 +18,16 @@ func setup(member: PartyMember):
 	%Headshot.texture = member.texture
 	%Level.text = "Level {0}".format([member.level])
 	%Name.text = "{0}".format([member.display_name])
+	%LHandGear.text = member.weapon_slots.get(PartyMember.ArmSlot.LeftHand).display_name;
+	%RHandGear.text = member.weapon_slots.get(PartyMember.ArmSlot.RightHand).display_name;
 	
 func _on_equipment_button_press(button: Button):
-	pass
+	var items:Array[GearRes] = InvManager.get_items()
+	%GearList.get_children().map(func(child): child.queue_free())
+	for item in items:
+		var label = Label.new()
+		label.text = item.display_name
+		%GearList.add_child(label)
 	
 func _input(event: InputEvent) -> void:
 	if current_state != Enums.EquipmentSelectionMenuState.ACTIVE:

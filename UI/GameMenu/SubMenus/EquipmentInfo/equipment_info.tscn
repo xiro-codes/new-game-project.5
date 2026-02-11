@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://djy6m5osu7hfb"]
+[gd_scene format=3 uid="uid://djy6m5osu7hfb"]
 
 [ext_resource type="Script" uid="uid://2smrgtdomdrf" path="res://UI/GameMenu/SubMenus/EquipmentInfo/equipment_info.gd" id="1_65vur"]
 [ext_resource type="PackedScene" uid="uid://dofsxtluwh4nu" path="res://UI/GameMenu/SubMenus/InfoButton/info_button.tscn" id="2_5isxt"]
 [ext_resource type="PackedScene" uid="uid://cd4ouogidv7we" path="res://UI/GameMenu/SubMenus/EquipmentInfo/info_panel.tscn" id="3_5isxt"]
 
-[node name="EquipmentInfo" type="MarginContainer" node_paths=PackedStringArray("buttons")]
+[node name="EquipmentInfo" type="MarginContainer" unique_id=276120796 node_paths=PackedStringArray("buttons")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,10 +13,10 @@ grow_vertical = 2
 script = ExtResource("1_65vur")
 buttons = [NodePath("HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer/InfoButton"), NodePath("HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer2/InfoButton"), NodePath("HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer3/InfoButton")]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1145061647]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=279856220]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 100
@@ -24,54 +24,54 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer" unique_id=2094105062]
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=1659880338]
 layout_mode = 2
 theme_override_constants/margin_bottom = 10
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1328207140]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer" unique_id=17502767]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer" instance=ExtResource("2_5isxt")]
-layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer" unique_id=2078104925]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer2" instance=ExtResource("2_5isxt")]
+[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer" unique_id=1762782561 instance=ExtResource("2_5isxt")]
 layout_mode = 2
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer" unique_id=1321429120]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer3" instance=ExtResource("2_5isxt")]
+[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer2" unique_id=445043960 instance=ExtResource("2_5isxt")]
 layout_mode = 2
 
-[node name="InfoPanel" parent="HBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_5isxt")]
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer" unique_id=1537150889]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="InfoButton" parent="HBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/PanelContainer/VBoxContainer/MarginContainer3" unique_id=1354569673 instance=ExtResource("2_5isxt")]
+layout_mode = 2
+
+[node name="InfoPanel" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=805528405 instance=ExtResource("3_5isxt")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1627722043]
 layout_mode = 2
 size_flags_horizontal = 3

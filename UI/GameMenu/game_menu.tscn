@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdmvu4u06lm00"]
+[gd_scene format=3 uid="uid://cdmvu4u06lm00"]
 
 [ext_resource type="Script" uid="uid://c0yfdh8gied2l" path="res://UI/GameMenu/game_menu.gd" id="1_svf8u"]
 [ext_resource type="PackedScene" uid="uid://tb858aadd5md" path="res://UI/GameMenu/SubMenus/PartyInfo/party_info.tscn" id="2_svf8u"]
@@ -14,11 +14,11 @@ gradient = SubResource("Gradient_f4psl")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aroug"]
 texture = SubResource("GradientTexture1D_y331g")
 
-[node name="GameMenu" type="CanvasLayer"]
+[node name="GameMenu" type="CanvasLayer" unique_id=759289194]
 process_mode = 2
 script = ExtResource("1_svf8u")
 
-[node name="Menu" type="MarginContainer" parent="."]
+[node name="Menu" type="MarginContainer" parent="." unique_id=95972685]
 offset_right = 212.0
 offset_bottom = 277.0
 theme_override_constants/margin_left = 10
@@ -26,59 +26,59 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu"]
+[node name="PanelContainer" type="PanelContainer" parent="Menu" unique_id=1949437556]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer" unique_id=1618242445]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Menu/PanelContainer/VBoxContainer" unique_id=911774887]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_aroug")
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/VBoxContainer/PanelContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/VBoxContainer/PanelContainer" unique_id=622105564]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Menu"
 
-[node name="Options" type="VBoxContainer" parent="Menu/PanelContainer/VBoxContainer"]
+[node name="Options" type="VBoxContainer" parent="Menu/PanelContainer/VBoxContainer" unique_id=1622574442]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PartyButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options"]
+[node name="PartyButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options" unique_id=1590161035]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Party"
 alignment = 0
 
-[node name="EquipmentButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options"]
+[node name="EquipmentButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options" unique_id=1042951117]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Equipment"
 alignment = 0
 
-[node name="InvButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options"]
+[node name="InvButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options" unique_id=73611580]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Inventory"
 alignment = 0
 
-[node name="SaveButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options"]
+[node name="SaveButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options" unique_id=1184234506]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Save
 "
 alignment = 0
 
-[node name="PartyInfo" parent="." instance=ExtResource("2_svf8u")]
+[node name="PartyInfo" parent="." unique_id=188405217 instance=ExtResource("2_svf8u")]
 unique_name_in_owner = true
 visible = false
 
-[node name="EquipmentInfo" parent="." instance=ExtResource("3_3nl1j")]
+[node name="EquipmentInfo" parent="." unique_id=282634638 instance=ExtResource("3_3nl1j")]
 unique_name_in_owner = true
 visible = false
 
-[node name="InventoryInfo" parent="." instance=ExtResource("4_wehxl")]
+[node name="InventoryInfo" parent="." unique_id=354937652 instance=ExtResource("4_wehxl")]
 unique_name_in_owner = true
 visible = false

@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="PartyMember" load_steps=11 format=3 uid="uid://brax60gkjn3vs"]
+[gd_resource type="Resource" script_class="PartyMember" format=3 uid="uid://brax60gkjn3vs"]
 
-[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_501f3"]
 [ext_resource type="Script" uid="uid://bnhskctdneq3g" path="res://Libs/Resources/party_member.gd" id="1_821gn"]
 [ext_resource type="Texture2D" uid="uid://dl32wf5541y87" path="res://Assets/Characters/Heros.png" id="2_itwuw"]
 [ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="3_x1pkd"]
@@ -17,23 +16,10 @@ region = Rect2(432, 0, 144, 144)
 [resource]
 script = ExtResource("1_821gn")
 display_name = "Ashon"
-level = 1
-base_hp = 100
-current_hp = 100
-speed = 0.075
-base_melee_shield = 25
-base_magic_shield = 15
 weapon_gear = Array[ExtResource("4_xydeb")]([ExtResource("4_x1pkd"), ExtResource("5_501f3")])
 weapon_slots = Dictionary[int, ExtResource("3_x1pkd")]({
 0: ExtResource("9_7v15p"),
 1: ExtResource("8_3y783")
 })
-body_slots = Dictionary[int, ExtResource("1_501f3")]({
-0: null,
-1: null,
-2: null,
-3: null
-})
 texture = SubResource("AtlasTexture_501f3")
-exp_owned = 0
 metadata/_custom_type_script = "uid://bnhskctdneq3g"
