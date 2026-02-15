@@ -10,6 +10,7 @@ enum MenuState {
 	EQUIPMENT_MENU_SHOWN,
 	INV_MENU_SHOWN,
 	INV_MENU_HIDE,
+	QUIT_GAME,
 	CLOSE,
 }
 enum EquipmentMenuState {
@@ -21,5 +22,12 @@ enum EquipmentMenuState {
 enum EquipmentSelectionMenuState {
 	INACTIVE,
 	ACTIVE,
+	SELECTING,
 }
+
+enum EquipmentSelectionListState {
+	INACTIVE,
+	ACTIVE,
+}
+
 #endregion

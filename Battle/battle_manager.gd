@@ -66,7 +66,7 @@ func setup_battle() -> void:
 	_combatants.clear()
 	# Ensure nodes referenced by % are available if not using @onready
 	# (Can be removed if using @onready and setup happens after _ready)
-	
+
 	# Instantiate and configure enemy combatants
 	for member_data in monster_party_data:
 		if not enemy_combatant_scene:
@@ -193,7 +193,7 @@ func _on_combatant_died(c: Combatant):
 	if not _combatants.has(c):
 		# Already removed or wasn't properly added, ignore.
 		return
-	
+
 	# Remove from the active list
 	_combatants.erase(c)
 
@@ -318,7 +318,7 @@ func _input(event: InputEvent) -> void:
 			# Execute the selected action on the chosen target
 			printt(current_combatant.member_data.display_name, " uses ", selected_action.display_name, " on ", target_combatant.member_data.display_name) # Assumes GearRes has a 'name'
 			apply_action(current_combatant, target_combatant, selected_action)
-		
+
 			# Mark input as handled and transition state
 			get_viewport().set_input_as_handled()
 			set_state(BATTLE_STATE.TURN_DONE)
@@ -357,7 +357,7 @@ func update_target_visuals() -> void:
 func clear_target_visuals() -> void:
 	var targets: Array[Combatant] = get_enemy_combatants()
 	if targets.is_empty():
-		return 
+		return
 	for i in targets:
 		i.selected = false
 
@@ -413,12 +413,13 @@ func set_state(new_state: BATTLE_STATE) -> void:
 					set_state(BATTLE_STATE.TURN_DONE) # End turn immediately
 					return
 
-				if current_combatant.member_data.weapon_gear.is_empty():
+				if current_combatant.member_data.equipment_slots.is_empty():
 					print("Enemy turn: ", current_combatant.member_data.display_name, " has no actions.")
 					set_state(BATTLE_STATE.TURN_DONE) # End turn immediately
 					return
 
-				var enemy_action: GearRes = current_combatant.member_data.weapon_gear.pick_random()
+				var enemy_gear:Array[PartyMember.Slot]= current_combatant.member_data.equipment_slots.keys()
+				var enemy_action = enemy_gear.filter(func(s): return s in [PartyMember.Slot.MainHand, PartyMember.Slot.OffHand]).map(func(c): return current_combatant.member_data.equipment_slots.get(c)).pick_random();
 				var target_player: Combatant = player_targets.pick_random()
 
 				printt(current_combatant.member_data.display_name, " uses ", enemy_action.display_name, " on ", target_player.member_data.display_name)
@@ -537,7 +538,7 @@ func apply_action(attacker: Combatant, target: Combatant, action: GearRes):
 		else:
 			damage_amount = action.damage
 
-		
+
 		if damage_amount > 0:
 			target.take_damage(damage_amount)
 			printt(target.member_data.display_name, " takes ", damage_amount, " damage.")
@@ -555,7 +556,7 @@ func apply_action(attacker: Combatant, target: Combatant, action: GearRes):
 		else:
 			damage_amount = action.damage
 
-		
+
 		if damage_amount > 0:
 			target.take_magic_damage(damage_amount)
 			printt(target.member_data.display_name, " takes ", damage_amount, " damage.")

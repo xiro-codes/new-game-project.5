@@ -21,20 +21,19 @@ class_name PartyMember
 
 ## An array holding references to the equipped weapon(s).
 ## Expected to contain Resource items inheriting from a custom 'GearRes' class (or similar).
-@export var weapon_gear: Array[GearRes] = [] 
+
+#@export var weapon_gear: Array[GearRes] = []
 ##TODO: This well be the new Equipment system variables
-enum ArmSlot {
-	LeftHand,
-	RightHand,
-}
-enum BodySlot {
+enum Slot {
+	MainHand,
+	OffHand,
 	Head,
 	Chest,
 	Feet,
 	Ring,
 }
-@export var weapon_slots: Dictionary[ArmSlot, WeaponGearRes] = {}
-@export var body_slots: Dictionary[BodySlot, DefenceGearRes] = {}
+@export var equipment_slots: Dictionary[Slot, GearRes] = {}
+
 ## The primary texture used for this party member's visual representation.
 ## This could be a portrait, a sprite sheet, or another texture used in the game.
 @export var texture: Texture
@@ -50,3 +49,8 @@ func set_exp_owned(value):
 		base_melee_shield += randi_range(2, 15)
 		base_melee_shield += randi_range(2, 15)
 		speed += .005
+
+func equip(slot: Slot, item: GearRes):
+	if slot in [ Slot.MainHand, Slot.OffHand]:
+		item = item as WeaponGearRes
+		equipment_slots.set(slot, item)

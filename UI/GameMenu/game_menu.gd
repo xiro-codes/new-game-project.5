@@ -9,6 +9,7 @@ func _ready()->void:
 	%PartyButton.pressed.connect(_on_party_button_pressed)
 	%EquipmentButton.pressed.connect(_on_equipment_button_pressed)
 	%InvButton.pressed.connect(_on_inv_button_pressed)
+	%QuitButton.pressed.connect(_on_quit_button_pressed)
 	set_state(Enums.MenuState.INACTIVE)
 	if buttons.is_empty():
 		for button in %Options.get_children():
@@ -22,6 +23,8 @@ func _on_equipment_button_pressed():
 	
 func _on_inv_button_pressed():
 	set_state(Enums.MenuState.INV_MENU_SHOWN)
+func _on_quit_button_pressed():
+	set_state(Enums.MenuState.QUIT_GAME)
 	
 func _input(event: InputEvent) -> void:
 	if current_state != Enums.MenuState.ACTIVE:
@@ -96,6 +99,9 @@ func set_state(new_state: Enums.MenuState):
 			set_process_input(true)
 			%InventoryInfo.set_process_input(false)
 			set_state(Enums.MenuState.ACTIVE)
+		Enums.MenuState.QUIT_GAME:
+			get_tree().quit(0)
+			
 		Enums.MenuState.CLOSE:
 			get_tree().call_deferred("set_pause", false)
 			set_state(Enums.MenuState.INACTIVE)

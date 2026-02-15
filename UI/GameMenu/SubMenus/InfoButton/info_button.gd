@@ -6,3 +6,4 @@ func setup(party_member: PartyMember):
 	%Name.text = "{0}".format([party_member.display_name])
 	%Health.text = "{0} / {1}".format([party_member.base_hp, party_member.base_hp])
 	%HeadShot.texture = party_member.texture
+

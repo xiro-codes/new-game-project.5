@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="PartyMember" format=3 uid="uid://tjybtpn63jwi"]
 
 [ext_resource type="Script" uid="uid://bnhskctdneq3g" path="res://Libs/Resources/party_member.gd" id="1_heo8t"]
+[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_yaoph"]
 [ext_resource type="Texture2D" uid="uid://dl32wf5541y87" path="res://Assets/Characters/Heros.png" id="2_vsk6g"]
 [ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="3_ug4ea"]
 [ext_resource type="Script" uid="uid://dda1krjpsv7kc" path="res://Libs/Resources/gear_res.gd" id="4_gef6t"]

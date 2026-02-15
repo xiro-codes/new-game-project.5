@@ -71,14 +71,21 @@ text = "Save
 "
 alignment = 0
 
+[node name="QuitButton" type="Button" parent="Menu/PanelContainer/VBoxContainer/Options" unique_id=16823619]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"
+alignment = 0
+
 [node name="PartyInfo" parent="." unique_id=188405217 instance=ExtResource("2_svf8u")]
 unique_name_in_owner = true
 visible = false
 
 [node name="EquipmentInfo" parent="." unique_id=282634638 instance=ExtResource("3_3nl1j")]
 unique_name_in_owner = true
-visible = false
 
 [node name="InventoryInfo" parent="." unique_id=354937652 instance=ExtResource("4_wehxl")]
 unique_name_in_owner = true
 visible = false
+
+[editable path="EquipmentInfo"]

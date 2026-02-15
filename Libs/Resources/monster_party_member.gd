@@ -5,8 +5,8 @@ class_name MonsterPartyMember
 
 func scale(value: float):
 	base_hp *= value
-	for weapon in weapon_gear:
-		weapon.damage *= value
+	#for weapon in weapon_gear:
+	#	weapon.damage *= value
 	base_magic_shield *= value
 	base_melee_shield *= value
 	current_hp = base_hp

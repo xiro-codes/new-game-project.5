@@ -9,7 +9,7 @@ offset_bottom = 409.0
 size_flags_vertical = 3
 theme_override_constants/margin_top = 10
 script = ExtResource("1_wh411")
-buttons = [NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/LHandButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/RHandButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/HeadButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button4"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button5"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button6")]
+buttons = [NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer/LHandButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer2/RHandButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer4/HeadButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer3/ChestButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer2/FeetButton"), NodePath("PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer/RingButton")]
 
 [node name="PanelContainer2" type="PanelContainer" parent="." unique_id=1328033294]
 layout_mode = 2
@@ -70,149 +70,91 @@ layout_mode = 2
 layout_mode = 2
 text = "Exp to Level 1000"
 
-[node name="Equipment" type="GridContainer" parent="PanelContainer2/MarginContainer/VBoxContainer" unique_id=733628877]
+[node name="Equipment" type="VBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer" unique_id=1778688651]
 layout_mode = 2
-columns = 2
 
-[node name="LHandLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=560822286]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1501788282]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LHandLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer" unique_id=560822286]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Left Hand"
 
-[node name="LHandButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=589876325]
+[node name="LHandButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer" unique_id=589876325]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="LHandGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/LHandButton" unique_id=150667641]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
 text = "None"
-horizontal_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/LHandButton" unique_id=186401033]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.2206897
-anchor_top = 0.5
-anchor_right = 2.151724
-anchor_bottom = 6.869565
-offset_left = -20.0
-offset_top = -10.0
-offset_bottom = 10.0
-grow_horizontal = 0
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/LHandButton/PanelContainer" unique_id=219648466]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=645289399]
 layout_mode = 2
 
-[node name="GearList" type="VBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/LHandButton/PanelContainer/ScrollContainer" unique_id=438797919]
-unique_name_in_owner = true
+[node name="RHandLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer2" unique_id=357549659]
 layout_mode = 2
-
-[node name="RHandLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=357549659]
-layout_mode = 2
+size_flags_horizontal = 3
 text = "Right Hand"
 
-[node name="RHandButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=979720738]
-layout_mode = 2
-
-[node name="RHandGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/RHandButton" unique_id=1102066679]
+[node name="RHandButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/HBoxContainer2" unique_id=979720738]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "None"
-horizontal_alignment = 1
-
-[node name="HeadLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=383914755]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "None"
+
+[node name="VBoxContainer4" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1305861535]
+layout_mode = 2
+
+[node name="HeadLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer4" unique_id=383914755]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Head"
 
-[node name="HeadButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=2078726379]
-layout_mode = 2
-
-[node name="HeadGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/HeadButton" unique_id=2082455127]
+[node name="HeadButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer4" unique_id=2078726379]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "None"
-horizontal_alignment = 1
-
-[node name="ChestLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=693382980]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "None"
+
+[node name="VBoxContainer3" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1401742862]
+layout_mode = 2
+
+[node name="ChestLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer3" unique_id=693382980]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Chest"
 
-[node name="Button4" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1216619323]
-layout_mode = 2
-
-[node name="ChestGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button4" unique_id=1882046598]
+[node name="ChestButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer3" unique_id=2062094555]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "None"
-horizontal_alignment = 1
-
-[node name="FeetLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=820109031]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "None"
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=240840375]
+layout_mode = 2
+
+[node name="FeetLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer2" unique_id=820109031]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Boots"
 
-[node name="Button5" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1491438836]
-layout_mode = 2
-
-[node name="FeetGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button5" unique_id=786620537]
+[node name="FeetButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer2" unique_id=417954006]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "None"
-horizontal_alignment = 1
-
-[node name="RingLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=1941353048]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "None"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=243351821]
+layout_mode = 2
+
+[node name="RingLabel" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer" unique_id=1941353048]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Ring"
 
-[node name="Button6" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment" unique_id=7534306]
-layout_mode = 2
-
-[node name="RingGear" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/Button6" unique_id=203795452]
+[node name="RingButton" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer/Equipment/VBoxContainer" unique_id=1466305436]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+size_flags_horizontal = 3
 text = "None"
-horizontal_alignment = 1

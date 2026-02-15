@@ -10,21 +10,21 @@ func _ready() -> void:
 	set_state(Enums.EquipmentMenuState.INACTIVE)
 	for button in buttons:
 		button.pressed.connect(_on_info_button_pressed.bind(button))
-		
+
 
 func setup():
 	set_state(Enums.EquipmentMenuState.ACTIVE)
 	var party_members:Array[PartyMember]= StateManager.load_player_data().party
 	for i in range(buttons.size()):
 		buttons[i].setup(party_members[i])
-	
+
 func _input(event: InputEvent) -> void:
 	if current_state != Enums.EquipmentMenuState.ACTIVE:
 		return
 	if event.is_action_pressed("ui_cancel"):
 		set_state(Enums.EquipmentMenuState.INACTIVE)
 		owner.set_state(Enums.MenuState.EQUIPMENT_MENU_HIDE)
-	
+
 	var navigated = false
 	if event.is_action_pressed('move_backward'):
 		select_index = ( select_index + 1) % buttons.size()
@@ -44,7 +44,7 @@ func update_focus():
 	buttons[select_index].grab_focus()
 	var party_member:PartyMember= StateManager.load_player_data().party[select_index]
 	buttons[select_index].set_meta("member",party_member)
-	
+
 func _on_info_button_pressed(button: InfoButton):
 	print("button selected")
 	set_state(Enums.EquipmentMenuState.EQUIPMENT_SELECTION_ACTIVE)
@@ -53,7 +53,7 @@ func _on_info_button_pressed(button: InfoButton):
 	%InfoPanel.show()
 	var member = button.get_meta("member")
 	%InfoPanel.setup(member)
-	pass
+
 func set_state(new_state: Enums.EquipmentMenuState):
 	if current_state == new_state:
 		return

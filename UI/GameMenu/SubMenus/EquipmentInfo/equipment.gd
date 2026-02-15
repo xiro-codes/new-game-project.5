@@ -5,13 +5,13 @@ var select_index:int = 0
 func _ready() -> void:
 	hide()
 	set_process_input(false)
-	
+
 func setup():
 	for i in get_children():
 		if not i is Button:
 			continue
 		buttons.append(i)
-		
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		#owner.set_state(owner.MenuState.EQUIPMENT_MENU_HIDE)
@@ -30,9 +30,9 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	if navigated:
 		update_focus()
-	
+
 func update_focus():
 	buttons[select_index].grab_focus()
 
-	
-	
+
+

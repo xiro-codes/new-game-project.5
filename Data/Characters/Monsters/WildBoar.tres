@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="MonsterPartyMember" format=3 uid="uid://bgb854wvdrqxd"]
 
+[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_62sox"]
 [ext_resource type="Script" uid="uid://c5wrlkwkqn8t7" path="res://Libs/Resources/monster_party_member.gd" id="1_bih0n"]
 [ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="2_tww0f"]
 [ext_resource type="Texture2D" uid="uid://c8pgckfbwvsk5" path="res://Assets/Monsters/boar.png" id="3_4iwv7"]
