@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdnwuqe0b48qn"]
+[gd_scene format=3 uid="uid://cdnwuqe0b48qn"]
 
 [ext_resource type="Script" uid="uid://bmch0wgblvxjk" path="res://Battle/battle_manager.gd" id="1_bqdiw"]
 [ext_resource type="PackedScene" uid="uid://ctmjq04p1i1s0" path="res://Battle/Combantants/player_combatant.tscn" id="2_6wqu2"]
@@ -13,13 +13,13 @@
 gradient = SubResource("Gradient_6oy3k")
 fill_to = Vector2(0.991453, 1)
 
-[node name="BattleManager" type="CanvasLayer"]
+[node name="BattleManager" type="CanvasLayer" unique_id=971223370]
 process_mode = 2
 script = ExtResource("1_bqdiw")
 player_combatant_scene = ExtResource("2_6wqu2")
 enemy_combatant_scene = ExtResource("3_c7p6n")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=279534876]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=46635943]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_i6dci")
 
-[node name="Combatants" type="Control" parent="Control"]
+[node name="Combatants" type="Control" parent="Control" unique_id=2137144422]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +44,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Combatants"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Combatants" unique_id=1218449195]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,62 +52,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer2" type="CenterContainer" parent="Control/Combatants/HBoxContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="Control/Combatants/HBoxContainer" unique_id=1392356721]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MonsterPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2"]
+[node name="MonsterPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2" unique_id=1315030485]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots" unique_id=584315459]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots" unique_id=385580622]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots"]
+[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer2/MonsterPartySlots" unique_id=1062348418]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="CenterContainer" type="CenterContainer" parent="Control/Combatants/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Control/Combatants/HBoxContainer" unique_id=1835650383]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PlayerPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer"]
+[node name="PlayerPartySlots" type="VBoxContainer" parent="Control/Combatants/HBoxContainer/CenterContainer" unique_id=128559488]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+[node name="1" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots" unique_id=307869046]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+[node name="2" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots" unique_id=36668998]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots"]
+[node name="3" type="MarginContainer" parent="Control/Combatants/HBoxContainer/CenterContainer/PlayerPartySlots" unique_id=70327278]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ResultUI" parent="Control" instance=ExtResource("2_bqdiw")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-
-[node name="ActionMenu" parent="Control" instance=ExtResource("2_xb3vn")]
+[node name="ResultUI" parent="Control" unique_id=1072325083 instance=ExtResource("2_bqdiw")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
-[node name="Targeter" parent="." instance=ExtResource("6_i6dci")]
+[node name="ActionMenu" parent="Control" unique_id=599296808 instance=ExtResource("2_xb3vn")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="Targeter" parent="." unique_id=2042678947 instance=ExtResource("6_i6dci")]

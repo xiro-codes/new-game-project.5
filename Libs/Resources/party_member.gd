@@ -54,3 +54,9 @@ func equip(slot: Slot, item: GearRes):
 	if slot in [ Slot.MainHand, Slot.OffHand]:
 		item = item as WeaponGearRes
 		equipment_slots.set(slot, item)
+
+func get_action() -> Array[WeaponGearRes]:
+	return [
+		equipment_slots.get(Slot.MainHand),
+		equipment_slots.get(Slot.OffHand),
+	]

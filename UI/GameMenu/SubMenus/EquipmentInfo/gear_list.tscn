@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://1l6ue86uhqq7"]
+
+[ext_resource type="Script" uid="uid://c1ebjibbv1emq" path="res://UI/GameMenu/SubMenus/EquipmentInfo/gear_list.gd" id="1_kghie"]
+
+[node name="GearList" type="HBoxContainer" unique_id=668612510]
+size_flags_vertical = 3
+script = ExtResource("1_kghie")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1460859762]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=741565880]
+layout_mode = 2
+follow_focus = true
+
+[node name="ListContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=598349141]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Container" type="Control" parent="." unique_id=4977963]
+layout_mode = 2
+size_flags_horizontal = 3

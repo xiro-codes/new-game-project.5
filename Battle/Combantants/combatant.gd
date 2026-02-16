@@ -1,5 +1,5 @@
 @tool
-class_name Combatant 
+class_name Combatant
 extends FlowContainer
 
 #region Signals
@@ -35,7 +35,7 @@ var _atb_timer : Timer
 
 #region Godot Overrides
 func _ready():
-	# Initialize HP.	
+	# Initialize HP.
 	%Health.max_value = member_data.base_hp
 
 	%MagicShield.max_value = member_data.base_magic_shield
@@ -46,7 +46,7 @@ func _ready():
 	atb_gauge = randf_range(0, 50.)
 
 	%LvlLabel.text = "Lvl. {0}".format([member_data.level])
-	%NameLabel.text = member_data.display_name 
+	%NameLabel.text = member_data.display_name
 	%HeadShot.texture = member_data.texture
 	set_process(false)
 
@@ -58,7 +58,7 @@ func _process(delta):
 	if !is_turn_active: # Only fill if not already acting
 		atb_gauge += ((member_data.speed * 100) * delta * 10) # Multiplying by 10 for better feel.  Adjust as needed.
 		atb_gauge = min(atb_gauge, 100.0)  # Clamp to 100.
-	if atb_gauge >= 100.0 and !is_turn_active: 
+	if atb_gauge >= 100.0 and !is_turn_active:
 		atb_gauge = 100.0
 		is_turn_active = true
 		turn_ready.emit(self)
@@ -82,7 +82,7 @@ func take_damage(damage : int):
 		$AnimationPlayer.play("on_death")
 		died.emit(self)
 		await $AnimationPlayer.animation_finished
-		
+
 		pass
 		#queue_free()  # basic death.  Replace with more complex death logic.
 
@@ -106,7 +106,8 @@ func action_finished():
 	is_turn_active = false # Reset
 	atb_gauge = 0.0 # Reset gauge
 	#_atb_timer.start() #restart timer
-	emit_signal("action_completed", self, self.member_data.weapon_gear.pick_random())
+	var action = self.member_data.get_action().pick_random()
+	emit_signal("action_completed", self, action)
 
 # Function to get the current ATB percentage (for UI display).
 func get_atb_percent() -> float:
@@ -120,7 +121,7 @@ func set_hp(new_hp : int):
 	%Health.value = current_hp
 	%HealthLabel.text = "{0} / {1}".format([current_hp, member_data.base_hp])
 	#emit_signal("hp_changed", self, current_hp, old_hp)
-	
+
 func set_melee_shield(new_value: int):
 	current_melee_shield = new_value
 	current_melee_shield = clamp(current_melee_shield, 0, member_data.base_melee_shield)
@@ -131,7 +132,7 @@ func set_magic_shield(new_value):
 	current_magic_shield = clamp(current_magic_shield, 0, member_data.base_magic_shield)
 	%MagicShield.value = current_magic_shield
 	%MagicShieldLabel.text = "{0} / {1}".format([current_magic_shield, member_data.base_magic_shield])
-	
+
 func start_processing():
 	set_process(true)
 func disable_processing():
@@ -142,7 +143,7 @@ func disable_processing():
 func _set_atb_gauge(value):
 	atb_gauge = value
 	%AtbGauge.value = value
-	
+
 func _set_selected(value):
 	selected = value
 	%SelectionMarker.visible = value

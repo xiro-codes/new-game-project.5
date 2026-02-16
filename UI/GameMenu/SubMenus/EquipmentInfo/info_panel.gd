@@ -25,19 +25,24 @@ func setup_details_panel(member: PartyMember):
 	var main_hand = member.equipment_slots.get(PartyMember.Slot.MainHand);
 	if main_hand is WeaponGearRes:
 		%LHandButton.text = main_hand.display_name;
+		%LHandButton.set_meta("slot", PartyMember.Slot.MainHand)
 	var off_hand = member.equipment_slots.get(PartyMember.Slot.OffHand);
 	if off_hand is WeaponGearRes:
 		%RHandButton.text = off_hand.display_name;
+		%RHandButton.set_meta("slot", PartyMember.Slot.OffHand)
 
 
 func _on_equipment_button_press(button: Button):
 	var items:Array[GearRes] = InvManager.get_items()
 	%GearList.list_container.get_children().map(func(child): child.queue_free())
-	for item in items:
+	#%GearList.buttons.clear()
+	for item in items.filter(func(i): return i.valid_slots.has(button.get_meta("slot"))):
 		var label = Button.new()
 		label.text = item.display_name
 		%GearList.list_container.add_child(label)
 		label.set_meta("item", item)
+		label.set_meta("item_slot", button.get_meta("slot"))
+
 	%GearList.setup();
 	set_state(Enums.EquipmentSelectionMenuState.SELECTING)
 	%GearList.grab_focus()
@@ -65,6 +70,8 @@ func _input(event: InputEvent) -> void:
 		update_focus()
 
 func update_focus():
+	if len(buttons) == 0:
+		return
 	buttons[select_index].grab_focus()
 
 
@@ -78,6 +85,7 @@ func set_state(new_state: Enums.EquipmentSelectionMenuState):
 		Enums.EquipmentSelectionMenuState.SELECTING:
 			set_process_input(false)
 		Enums.EquipmentSelectionMenuState.ACTIVE:
+			setup_details_panel(self.get_meta("member"))
 			set_process_input(true)
 			update_focus()
 			show()

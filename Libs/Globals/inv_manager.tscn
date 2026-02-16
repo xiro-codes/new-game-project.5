@@ -8,10 +8,10 @@
 [ext_resource type="Resource" uid="uid://djqaok7yh42wp" path="res://Data/Gear/WeaponGear/Magic/Fire.tres" id="6_b1lor"]
 [ext_resource type="Resource" uid="uid://bbky3ybdjne3" path="res://Data/Gear/WeaponGear/Magic/Aquara.tres" id="7_vraot"]
 [ext_resource type="Resource" uid="uid://s0phv6jbu1cx" path="res://Data/Gear/WeaponGear/Magic/Firaga.tres" id="8_pf3af"]
-[ext_resource type="Resource" uid="uid://bkyr2c0qd7bhq" path="res://Data/Gear/MonsterGear/Attacks/tusk.tres" id="9_ve63g"]
 [ext_resource type="Resource" uid="uid://cgx4htj3gv1vt" path="res://Data/Gear/WeaponGear/Bows/Old Bow.tres" id="10_pubax"]
+[ext_resource type="Resource" uid="uid://dlrl55gjtv7w4" path="res://Data/Gear/HeadGear/SimpleHat.tres" id="11_eljy4"]
 [ext_resource type="Resource" uid="uid://cdujlthpp1ngv" path="res://Data/Gear/WeaponGear/Axes/Old Axe.tres" id="11_kjgyd"]
 
 [node name="InvManager" type="Node" unique_id=151984512]
 script = ExtResource("1_otg54")
-items = Array[ExtResource("2_80awv")]([ExtResource("3_j7vna"), ExtResource("3_j7vna"), ExtResource("3_j7vna"), ExtResource("4_j7vna"), ExtResource("5_eljy4"), ExtResource("6_b1lor"), ExtResource("7_vraot"), ExtResource("8_pf3af"), ExtResource("9_ve63g"), ExtResource("4_j7vna"), ExtResource("10_pubax"), ExtResource("11_kjgyd"), ExtResource("6_b1lor"), ExtResource("8_pf3af")])
+items = Array[ExtResource("2_80awv")]([ExtResource("3_j7vna"), ExtResource("4_j7vna"), ExtResource("5_eljy4"), ExtResource("6_b1lor"), ExtResource("7_vraot"), ExtResource("8_pf3af"), ExtResource("4_j7vna"), ExtResource("10_pubax"), ExtResource("11_kjgyd"), ExtResource("6_b1lor"), ExtResource("8_pf3af"), ExtResource("11_eljy4")])

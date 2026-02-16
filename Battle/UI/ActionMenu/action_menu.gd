@@ -20,7 +20,7 @@ func on_turn_started(c: Combatant):
 		setup_buttons()
 	else:
 		buttons.all(func(b): b.hide())
-		
+
 func on_turn_ended(c: Combatant):
 	hide()
 	for i in buttons:
@@ -29,11 +29,11 @@ func on_turn_ended(c: Combatant):
 		#i.pressed.disconnect(owner._on_action_selected)
 		i.set_meta("gear", null)
 	c.action_finished()
-	
+
 func _on_action_selected(b: Button):
 	var gear:GearRes = b.get_meta("gear")
 	action_selected.emit(gear)
-	
+
 func _input(event: InputEvent) -> void:
 	if !buttons.any(func(b): return b.visible) or (owner as BattleManager).current_state == BattleManager.BATTLE_STATE.SELECTING_TARGET :
 		return
@@ -56,12 +56,17 @@ func _input(event: InputEvent) -> void:
 
 func update_focus():
 	buttons[select_index].grab_focus()
-	
+
 func setup_buttons():
-	for i in range(buttons.size()):
-		if owner.current_combatant.member_data.weapon_gear.size() - 1 < i:
-			continue
-		buttons[i].text = owner.current_combatant.member_data.weapon_gear[i].display_name
-		buttons[i].set_meta("gear", owner.current_combatant.member_data.weapon_gear[i])
-		buttons[i].show()
-		#buttons[i].pressed.connect(_on_action_selected.bind(buttons[i]))
+		var data: PartyMember = owner.current_combatant.member_data;
+		var main_hand:WeaponGearRes = data.equipment_slots.get(PartyMember.Slot.MainHand)
+		var off_hand: WeaponGearRes = data.equipment_slots.get(PartyMember.Slot.OffHand)
+
+		if main_hand:
+			buttons[0].text = main_hand.display_name
+			buttons[0].set_meta("gear", main_hand)
+			buttons[0].show()
+		if off_hand:
+			buttons[1].text = off_hand.display_name
+			buttons[1].set_meta("gear", off_hand)
+			buttons[1].show()

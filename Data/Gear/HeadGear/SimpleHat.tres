@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DefenceGearRes" format=3 uid="uid://dlrl55gjtv7w4"]
+
+[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_kwp4l"]
+
+[resource]
+script = ExtResource("1_kwp4l")
+valid_slots = Array[int]([2])
+metadata/_custom_type_script = "uid://dwcoltpf3fmrp"

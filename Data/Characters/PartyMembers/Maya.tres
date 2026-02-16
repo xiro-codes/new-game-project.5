@@ -1,12 +1,8 @@
 [gd_resource type="Resource" script_class="PartyMember" format=3 uid="uid://tjybtpn63jwi"]
 
 [ext_resource type="Script" uid="uid://bnhskctdneq3g" path="res://Libs/Resources/party_member.gd" id="1_heo8t"]
-[ext_resource type="Script" uid="uid://dwcoltpf3fmrp" path="res://Libs/Resources/defence_gear.gd" id="1_yaoph"]
 [ext_resource type="Texture2D" uid="uid://dl32wf5541y87" path="res://Assets/Characters/Heros.png" id="2_vsk6g"]
-[ext_resource type="Script" uid="uid://3bmgpwppvnyu" path="res://Libs/Resources/weapon_gear.gd" id="3_ug4ea"]
 [ext_resource type="Script" uid="uid://dda1krjpsv7kc" path="res://Libs/Resources/gear_res.gd" id="4_gef6t"]
-[ext_resource type="Resource" uid="uid://c1mq7an3nqtaf" path="res://Data/Gear/WeaponGear/Bows/Training Bow.tres" id="4_ug4ea"]
-[ext_resource type="Resource" uid="uid://bel0pnbue7jyp" path="res://Data/Gear/WeaponGear/Blades/Training Blade.tres" id="5_28o3q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b63gh"]
 atlas = ExtResource("2_vsk6g")
@@ -15,6 +11,5 @@ region = Rect2(144, 0, 144, 144)
 [resource]
 script = ExtResource("1_heo8t")
 display_name = "Maya"
-weapon_gear = Array[ExtResource("4_gef6t")]([ExtResource("4_ug4ea"), ExtResource("5_28o3q")])
 texture = SubResource("AtlasTexture_b63gh")
 metadata/_custom_type_script = "uid://bnhskctdneq3g"

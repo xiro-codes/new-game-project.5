@@ -11,6 +11,7 @@ func _ready() -> void:
 	set_state(Enums.EquipmentSelectionListState.INACTIVE)
 
 func setup():
+	#buttons.clear()
 	for button in list_container.get_children():
 		button.pressed.connect(_on_item_button_press.bind(button))
 		buttons.push_back(button)
@@ -19,11 +20,10 @@ func setup():
 func _on_item_button_press(button: Button):
 	var target:PartyMember = %InfoPanel.get_meta("member")
 	var item = button.get_meta("item")
-	print(item)
-	print(target.display_name)
-
-	# target.equip()
-	print(button.text)
+	var slot = button.get_meta("item_slot")
+	target.equip(slot, item)
+	set_state(Enums.EquipmentSelectionListState.INACTIVE)
+	%InfoPanel.set_state(Enums.EquipmentSelectionMenuState.ACTIVE)
 
 func update_focus():
 	buttons[select_index].grab_focus()
